@@ -1,39 +1,67 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# DiverPro
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+DiverPro is a State Management Library and Dependency Injection package for Flutter. It's my take on Riverpod and Provider.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- State management
+- Dependency injection
+- Singleton, factory, and lazy singleton support
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, add `diverpro` as a dependency in your `pubspec.yaml` file.
+
+```yaml
+dependencies:
+  diverpro:
+    git:
+      url: https://github.com/unix14/diverpro.git
+      ref: main
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+### Registering Instances
+
+You can register instances, factories, singletons, and lazy singletons using the DiverPro class.
+
 
 ```dart
-const like = 'sample';
+import 'package:diverpro/diverpro.dart';
+
+void main() {
+final diverPro = DiverPro();
+
+// Register an instance
+diverPro.register<MyClass>(MyClass());
+
+// Register a factory
+diverPro.factory<MyClass>(() => MyClass());
+
+// Register a singleton
+diverPro.singleton<MyClass>(() => MyClass());
+
+// Register a lazy singleton
+diverPro.lazySingleton<MyClass>(() => MyClass());
+}
+
+### Retrieving Instances
+
+You can retrieve instances using the get method.
+
+```dart
+final myClassInstance = diverPro.get<MyClass>();
 ```
 
-## Additional information
+### Clearing Instances
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+You can clear all registered instances using the clear method.
+
+```dart
+DiverPro.clear();
+```
+
+### Additional information
+
+Contributions are welcome! Please file issues and submit pull requests on the GitHub repository.
