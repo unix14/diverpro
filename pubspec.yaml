@@ -1,0 +1,17 @@
+name: diverpro
+description: DiverPro is a State Management Library and Dependency Injection package for Flutter. It's my take on Riverpod and Provider.
+version: 1.0.0
+repository: https://github.com/unix14/diverpro
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  livedatax: ^1.0.0
+  flutter:
+    sdk: flutter
+
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.24.0
