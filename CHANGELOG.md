@@ -13,3 +13,7 @@
 ## 1.0.3
 
 - Rewrite README.md. again. again.
+
+## 1.0.4
+
+- Rewrite README.md. again. again. again.

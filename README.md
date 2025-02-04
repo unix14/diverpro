@@ -26,12 +26,11 @@ dependencies:
 
 You can register instances, factories, singletons, and lazy singletons using the DiverPro class.
 
-
 ```dart
 import 'package:diverpro/diverpro.dart';
 
 void main() {
-final diverPro = DiverPro();
+    final diverPro = DiverPro();
 
     // Register an instance
     diverPro.register<MyClass>(MyClass());
@@ -44,7 +43,7 @@ final diverPro = DiverPro();
     
     // Register a lazy singleton
     diverPro.lazySingleton<MyClass>(() => MyClass());
-    }
+}
 ```
 
 ### Retrieving Instances
