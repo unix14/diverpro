@@ -33,18 +33,19 @@ import 'package:diverpro/diverpro.dart';
 void main() {
 final diverPro = DiverPro();
 
-// Register an instance
-diverPro.register<MyClass>(MyClass());
-
-// Register a factory
-diverPro.factory<MyClass>(() => MyClass());
-
-// Register a singleton
-diverPro.singleton<MyClass>(() => MyClass());
-
-// Register a lazy singleton
-diverPro.lazySingleton<MyClass>(() => MyClass());
-}
+    // Register an instance
+    diverPro.register<MyClass>(MyClass());
+    
+    // Register a factory
+    diverPro.factory<MyClass>(() => MyClass());
+    
+    // Register a singleton
+    diverPro.singleton<MyClass>(() => MyClass());
+    
+    // Register a lazy singleton
+    diverPro.lazySingleton<MyClass>(() => MyClass());
+    }
+```
 
 ### Retrieving Instances
 
